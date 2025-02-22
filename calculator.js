@@ -23,12 +23,6 @@ class Calculator {
     return result;
   }
 
-  multiply(...numbers) {
-    const result = numbers.reduce((product, num) => product * num, 1);
-    this.history.push({ operation: "multiply", numbers, result });
-    return result;
-  }
-
   divide(...numbers) {
     if (numbers.slice(1).includes(0)) {
       throw new Error("Division by zero is not allowed");
